@@ -19,13 +19,23 @@ Notes and scripts for SC2LE released by DeepMind and Blizzard, more details [her
 
 ## Work by others
 
-[Chris' blog post](http://chris-chris.ai/2017/08/30/pysc2-tutorial1/)
+Chris' blog post and repo
 
-[Chris' repo](https://github.com/chris-chris/pysc2-examples)
+<http://chris-chris.ai/2017/08/30/pysc2-tutorial1/>
 
-[Siraj's Youtube tutorial](https://www.youtube.com/watch?v=URWXG5jRB-A&feature=youtu.be)
+<https://github.com/chris-chris/pysc2-examples>
 
-[Accompanying code for Siraj's tutorial](https://github.com/llSourcell/A-Guide-to-DeepMinds-StarCraft-AI-Environment)
+Siraj's Youtube tutorial and accompanying code
+
+<https://www.youtube.com/watch?v=URWXG5jRB-A&feature=youtu.be>
+
+<https://github.com/llSourcell/A-Guide-to-DeepMinds-StarCraft-AI-Environment>
+
+Steven's Medium articles for a simple hardcoded agent and one based on Q-tables
+
+<https://chatbotslife.com/building-a-basic-pysc2-agent-b109cde1477c>
+
+<https://chatbotslife.com/building-a-smart-pysc2-agent-cdc269cb095d>
 
 Let me know if anyone else is also working on this and I'll add a link here!
 
