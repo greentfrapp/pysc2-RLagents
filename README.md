@@ -38,4 +38,10 @@ This folder contains my own notes and thoughts on working with SC2LE.
 The entire unfiltered action space for an SC2LE agent. 
 
 It contains 524 base actions / functions with 101938719 possible actions given a minimap_resolution of (64, 64) and screen_resolution of (84, 84).
+
+### List of Argument Types
+
+The entire list of argument types for use in the actions / functions.
+
+It contains 13 argument types with descriptions.
  
