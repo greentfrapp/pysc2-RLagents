@@ -1,0 +1,98 @@
+==================================================
+Running an Agent in pysc2.env.sc2_env.SC2Env
+==================================================
+
+At each timestep, the agent.step function is called with an observation in the form of a TimeStep object, ie.
+
+agent.step(obs)
+
+where obs is a TimeStep object.
+
+agent.step(obs) is then expected to return an action with subaction arguments, ie.
+
+return actions.FunctionCall(_NOOP, [])
+
+obs is a TimeStep object with the following properties
+
+TimeStep.step_type
+	step_type=<StepType.FIRST: 0> if this is the first step
+	step_type=<StepType.MID: 1> if this is neither the first nor the last step
+	step_type=<StepType.LAST: 2> if this is the last step
+
+TimeStep.reward
+	a scalar value that denotes the reward for the TimeStep
+
+TimeStep.discount
+	a scalar value in range [0, 1]
+
+TimeStep.observation
+	a dictionary with the following key-value pairs
+		'cargo': (n, 7) tensor, for each unit in a transport, refer to 'single_select'
+		'minimap': (7, 64, 64) tensor, in the following order
+			[0]: height_map
+			[1]: visibility_map
+			[2]: creep
+			[3]: camera
+			[4]: player_id
+			[5]: player_relative
+			[6]: selected
+		'game_loop': (1,) tensor showing game step
+		'available_actions': (n,) tensor showing ids of valid actions
+		'screen': (17, 84, 84) tensor, in the following order
+			[0]: height_map
+			[1]: visibility_map
+			[2]: creep
+			[3]: power
+			[4]: player_id
+			[5]: player_relative
+			[6]: unit_type
+			[7]: selected
+			[8]: unit_hit_points
+			[9]: unit_hit_points_ratio
+			[10]: unit_energy
+			[11]: unit_energy_ratio
+			[12]: unit_shields
+			[13]: unit_shields_ratio
+			[14]: unit_density
+			[15]: unit_density_aa
+			[16]: effects
+		'control_groups': (10, 2) tensor, for each of the control groups
+			[0]: unit leader type
+			[1]: count
+		'multi_select': (n, 7) tensor, for each currently selected unit, refer to 'single_select'
+		'cargo_slots_available': (1,) tensor showing number of slots available in transport
+		'player': (11,) tensor, for general information
+			[0]: player_id
+			[1]: minerals
+			[2]: vespene
+			[3]: food used / supply
+			[4]: food cap
+			[5]: food used by army
+			[6]: food used by workers
+			[7]: idle worker count
+			[8]: army count
+			[9]: warp gate count
+			[10]: larva count
+		'single_select': (1, 7) tensor, for the currently selected unit
+			[0]: unit type
+			[1]: player_relative
+			[2]: health
+			[3]: shields
+			[4]: energy
+			[5]: transport slot taken if in transport
+			[6]: build progress (%) if being built
+		'build_queue': (n, 7) tensor, for each unit in a build queue, refer to 'single_select'
+		'score_cumulative': (13,) tensor, showing score information
+			[0]: overall score
+			[1]: idle production time
+			[2]: idle worker time
+			[3]: total value of own units
+			[4]: total value of own structures
+			[5]: total value of killed units
+			[6]: total value of destroyed structures
+			[7]: collected minerals
+			[8]: collected vespene
+			[9]: mineral collection rate
+			[10]: vespene collection rate
+			[11]: spent minerals
+			[12]: spent vespene
