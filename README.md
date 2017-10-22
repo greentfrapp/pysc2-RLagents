@@ -54,4 +54,8 @@ It contains 524 base actions / functions with 101938719 possible actions given a
 The entire list of argument types for use in the actions / functions.
 
 It contains 13 argument types with descriptions.
+
+## Running an Agent
+
+Notes on running an agent in the pysc2.env.sc2_env.SC2Env environment. In particular, showing the details on the TimeStep object (observation) fed to the step function of an agent.
  
