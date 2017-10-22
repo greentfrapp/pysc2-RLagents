@@ -1,70 +1,59 @@
+==================================================
 List of Argument Types for Actions/Functions
+==================================================
 
-# screen
+[0] screen
 # A point on the screen, by default accepts 2 integers [0, 84)
-screen=ArgumentType(id=0, name='screen', sizes=(0, 0), fn=<function <lambda> at 0x103248398>)
 
-# minimap
+[1] minimap
 # A point on the minimap, by default accepts 2 integers [0, 64)
-minimap=ArgumentType(id=1, name='minimap', sizes=(0, 0), fn=<function <lambda> at 0x103248d70>)
 
-# screen2
+[2] screen2
 # Same as screen(id=0), used when two screen points need to be selected
-screen2=ArgumentType(id=2, name='screen2', sizes=(0, 0), fn=<function <lambda> at 0x103248de8>)
 
-# queued
+[3] queued
 # Whether the action should be taken immediately or after previous actions, boolean
-queued=ArgumentType(id=3, name='queued', sizes=(2,), fn=<function <lambda> at 0x103248e60>)
 
-# control_group_act
+[4] control_group_act
 # Reference for each of the five actions related to control groups, scalar integer [0, 5)
 # 0 - Recall
 # 1 - Set
 # 2 - Append
 # 3 - SetAndSteal (set selected units to control group and remove from other control groups)
 # 4 - AppendAndSteal (add selected units to control group and remove from other control groups)
-control_group_act=ArgumentType(id=4, name='control_group_act', sizes=(5,), fn=<function <lambda> at 0x103248ed8>)
 
-# control_group_id
+[5] control_group_id
 # Reference for each of the ten control groups that can be assigned, scalar integer [0, 10)
-control_group_id=ArgumentType(id=5, name='control_group_id', sizes=(10,), fn=<function <lambda> at 0x103248f50>)
 
-# select_point_act
+[6] select_point_act
 # Reference for each of the four actions related to selecting a point, scalar integer [0, 4)
 # 0 - Select
 # 1 - Toggle (add or subtract from selection)
 # 2 - AllType (select all units of the same type)
 # 3 - AddAllType (add all units of the same type to selection)
-select_point_act=ArgumentType(id=6, name='select_point_act', sizes=(4,), fn=<function <lambda> at 0x10324c050>)
 
-# select_add
+[7] select_add
 # Whether to select or add to existing selection, boolean
-select_add=ArgumentType(id=7, name='select_add', sizes=(2,), fn=<function <lambda> at 0x10324c0c8>)
 
-# select_unit_act
+[8] select_unit_act
 # Reference for each of the four actions related to selecting a unit from the multipanel, scalar integer [0, 4)
 # 0 - SingleSelect
 # 1 - DeselectUnit
 # 2 - SelectAllOfType
 # 3 - DeselectAllOfType
-select_unit_act=ArgumentType(id=8, name='select_unit_act', sizes=(4,), fn=<function <lambda> at 0x10324c140>)
 
-# select_unit_id
+[9] select_unit_id
 # Reference for each unit that can be selected from the current multipanel, scalar integer [0, 500)
-select_unit_id=ArgumentType(id=9, name='select_unit_id', sizes=(500,), fn=<function <lambda> at 0x10324c1b8>)
 
-# select_worker
+[10] select_worker
 # Reference for each of the four actions related to selecting an idle work, scalar integer [0, 4)
 # 0 - Set (select)
 # 1 - Add (add to selection)
 # 2 - All (select all idle workers)
 # 3 - AddAll (add all idle workers to selection)
-select_worker=ArgumentType(id=10, name='select_worker', sizes=(4,), fn=<function <lambda> at 0x10324c230>)
 
-# build_queue_id
+[11] build_queue_id
 # Reference for each unit in a build queue (max 10), scalar integer [0, 10)
-build_queue_id=ArgumentType(id=11, name='build_queue_id', sizes=(10,), fn=<function <lambda> at 0x10324c2a8>)
 
-# unload_id
+[12] unload_id
 # Reference for each loaded unit in a cargo, scalar integer [0, 500)
-unload_id=ArgumentType(id=12, name='unload_id', sizes=(500,), fn=<function <lambda> at 0x10324c320>))
