@@ -1,0 +1,20 @@
+# SC2LE Research Log
+## Entry #1
+### 2017-11-01
+
+## Current Progress:
+
+Currently able to run an A3C script adapted from AWJuliani's (implementation)[https://medium.com/emergent-future/simple-reinforcement-learning-with-tensorflow-part-8-asynchronous-actor-critic-agents-a3c-c88f72a5e9f2].
+
+I limited the observation features to TimeStep.observation['single_select'] which is a (1,7) tensor.
+The actions are sampled from base_actions (17-dim) but the input action to env.step is fixed to no_op.
+The actions returns to the A3C algorithm is also fixed to 0.
+
+For faster debugging I run only 1 thread but the script also works with 4 threads.
+
+Applying a random reward results in corresponding changes in the value function and the action distribution / policy.
+
+## Next Steps:
+
+I am planning to input the actual action from the sample, with the arguments for the actions fixed.
+The returned action to the A3C algorithm should also be from this input.
