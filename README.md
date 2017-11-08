@@ -60,4 +60,16 @@ Contains notes on developing RL agents for SC2LE.
 ## Agents
 
 Contains a script that trains an A3C agent for the DefeatRoaches minigame.
+
+### PySC2_A3Cagent.py
+
+I initially focused on the DefeatRoaches minigame and so I only took in 7 screen features and 3 nonspatial features for the state space and the action space is limited to 17 base actions and their relevant arguments. 
+
+For the action space, I modeled the base actions and arguments independently. In addition, I also model x and y coordinates independently for spatial arguments, to further reduce the effective action space.
+
+The agent currently samples the distributions returned from the policy networks for the actions taken, instead of an epsilon-greedy.
+
+Also, the policy networks for the arguments are updated irregardless of whether the argument was used (eg. even if a no_op action is taken, the argument policies are still updated), which should probably be corrected.
+
+Will be updating this to work with all the minigames.
  
