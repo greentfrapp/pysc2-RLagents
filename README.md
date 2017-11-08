@@ -37,25 +37,44 @@ Steven's Medium articles for a simple hardcoded agent and one based on Q-tables
 
 <https://chatbotslife.com/building-a-smart-pysc2-agent-cdc269cb095d>
 
+pekaalto's work on adapting OpenAI's gym environment to SC2LE and an implementation of the FullyConv algorithm plus results on three minigames
+
+<https://github.com/pekaalto/sc2atari>
+
+Arthur Juliani's posts and repo for RL agents
+
+Not SC2LE but mentioned here because my agent script was built on Juliani's A3C implementation.
+
+<https://medium.com/emergent-future/simple-reinforcement-learning-with-tensorflow-part-8-asynchronous-actor-critic-agents-a3c-c88f72a5e9f2>
+<https://github.com/awjuliani/DeepRL-Agents>
+
 Let me know if anyone else is also working on this and I'll add a link here!
 
 ## Notes
 
-This folder contains my own notes and thoughts on working with SC2LE.
+Contains general notes on working with SC2LE.
 
 ### Total Action Space
 
-The entire unfiltered action space for an SC2LE agent. 
+The entire unfiltered action space for an SC2LE agent.
 
 It contains 524 base actions / functions with 101938719 possible actions given a minimap_resolution of (64, 64) and screen_resolution of (84, 84).
 
-### List of Argument Types
+### List of Action Argument Types
 
-The entire list of argument types for use in the actions / functions.
+The entire list of action argument types for use in the actions / functions.
 
 It contains 13 argument types with descriptions.
 
-## Running an Agent
+### Running an Agent
 
-Notes on running an agent in the pysc2.env.sc2_env.SC2Env environment. In particular, showing the details on the TimeStep object (observation) fed to the step function of an agent.
+Notes on running an agent in the pysc2.env.sc2_env.SC2Env environment. In particular, showing details and brief descriptions of the TimeStep object (observation) fed to the step function of an agent or returned from calling the step function of an environment.
+
+## ResearchLog
+
+Contains notes on developing RL agents for SC2LE.
+
+## Agents
+
+Contains a script that trains an A3C agent for the DefeatRoaches minigame.
  
