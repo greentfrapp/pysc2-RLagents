@@ -1,4 +1,4 @@
-# sc2le
+# pysc2-RLagents
 Notes and scripts for SC2LE released by DeepMind and Blizzard, more details [here](https://github.com/deepmind/pysc2).
 
 ## Important Links
