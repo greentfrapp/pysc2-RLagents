@@ -1,1 +1,5 @@
 .DS_Store
+
+# Directories creates from PySC2_A3Cagent.py
+Agents/train_*
+Agents/model
