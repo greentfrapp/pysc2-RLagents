@@ -1,5 +1,5 @@
 """
-PySC2_A3Cagent.py
+PySC2_A3C_old.py
 A script for training and running an A3C agent on the PySC2 environment, with reference to DeepMind's paper:
 [1] Vinyals, Oriol, et al. "Starcraft II: A new challenge for reinforcement learning." arXiv preprint arXiv:1708.04782 (2017).
 Advantage estimation uses generalized advantage estimation from:

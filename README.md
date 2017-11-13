@@ -59,9 +59,23 @@ Contains notes on developing RL agents for SC2LE.
 
 ## Agents
 
-Contains a script that trains an A3C agent for the DefeatRoaches minigame.
+Contains scripts for training and running RL agents in SC2LE.
 
-### PySC2_A3Cagent.py
+### `PySC2_A3C_AtariNet.py`
+
+This script implements the A3C algorithm with the Atari-net architecture described in DeepMind's paper, for SC2LE. The code is based on Arthur Juliani's A3C implementation for the VizDoom environment (see above).
+
+This is a generalized version of PySC2_A3C_old.py that works for all minigames and also contains some bug fixes.
+
+To run the script, use the following command:
+
+`python PySC2_A3C_AtariNet.py --map_name CollectMineralShards`
+
+If `--map_name` is not supplied, the script runs DefeatRoaches by default.
+
+### `PySC2_A3C_old.py`
+
+#### This is an initial script that only works for the DefeatRoaches minigame. Check out PySC2_A3C_AtariNet.py for the latest agent that runs on all minigames.
 
 I initially focused on the DefeatRoaches minigame and so I only took in 7 screen features and 3 nonspatial features for the state space and the action space is limited to 17 base actions and their relevant arguments. 
 
@@ -72,4 +86,6 @@ The agent currently samples the distributions returned from the policy networks 
 Also, the policy networks for the arguments are updated irregardless of whether the argument was used (eg. even if a no_op action is taken, the argument policies are still updated), which should probably be corrected.
 
 Will be updating this to work with all the minigames.
+
+As of 50 million episodes on DefeatRoaches, the agent achieved max and average scores of 338 and 65, compared to DeepMind's Atari-net agent that achieved max and average scores of 351 and 101 after 600 million episodes.
  
