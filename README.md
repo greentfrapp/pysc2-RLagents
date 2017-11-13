@@ -87,5 +87,5 @@ Also, the policy networks for the arguments are updated irregardless of whether 
 
 Will be updating this to work with all the minigames.
 
-As of 50 million episodes on DefeatRoaches, the agent achieved max and average scores of 338 and 65, compared to DeepMind's Atari-net agent that achieved max and average scores of 351 and 101 after 600 million episodes.
+As of 50 million steps on DefeatRoaches, the agent achieved max and average scores of 338 and 65, compared to DeepMind's Atari-net agent that achieved max and average scores of 351 and 101 after 600 million steps.
  
