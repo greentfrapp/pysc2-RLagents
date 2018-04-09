@@ -75,7 +75,7 @@ If `--map_name` is not supplied, the script runs DefeatRoaches by default.
 
 ### `PySC2_A3C_old.py`
 
-#### This is an initial script that only works for the DefeatRoaches minigame. Check out PySC2_A3C_AtariNet.py for the latest agent that runs on all minigames.
+#### This is an initial script that only works for the DefeatRoaches minigame. There is also a model file in this repo that will load if you just run `python PySC2_A3C_old.py`.
 
 I initially focused on the DefeatRoaches minigame and so I only took in 7 screen features and 3 nonspatial features for the state space and the action space is limited to 17 base actions and their relevant arguments. 
 
@@ -87,5 +87,5 @@ Also, the policy networks for the arguments are updated irregardless of whether 
 
 Will be updating this to work with all the minigames.
 
-As of 50 million steps on DefeatRoaches, the agent achieved max and average scores of 338 and 65, compared to DeepMind's Atari-net agent that achieved max and average scores of 351 and 101 after 600 million steps.
+As of ~10 million steps on DefeatRoaches, the agent achieved max and average scores of 338 and 65, compared to DeepMind's Atari-net agent that achieved max and average scores of 351 and 101 after 600 million steps.
  

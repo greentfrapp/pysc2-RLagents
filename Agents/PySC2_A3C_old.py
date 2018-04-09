@@ -14,7 +14,7 @@ Currently only works on the DefeatRoaches mini-game; work is in-progress for gen
 """
 
 import threading
-import multiprocessing
+import psutil
 import numpy as np
 import tensorflow as tf
 import scipy.signal
@@ -585,8 +585,8 @@ class Worker():
 def main():
     max_episode_length = 300
     gamma = .99 # discount rate for advantage estimation and reward discounting
-    load_model = False
-    model_path = './model'
+    load_model = True
+    model_path = './_model_old'
 
     global _max_score, _running_avg_score, _steps, _episodes
     _max_score = -9
@@ -603,7 +603,8 @@ def main():
         global_episodes = tf.Variable(0,dtype=tf.int32,name='global_episodes',trainable=False)
         trainer = tf.train.AdamOptimizer(learning_rate=1e-4)
         master_network = AC_Network('global',None) # Generate global network
-        num_workers = multiprocessing.cpu_count() # Set workers to number of available CPU threads
+        num_workers = psutil.cpu_count() # Set workers to number of available CPU threads
+        num_workers = 1
         workers = []
         # Create worker classes
         for i in range(num_workers):
