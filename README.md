@@ -1,3 +1,5 @@
+# Update coming by 13th May 2018
+
 # pysc2-RLagents
 Notes and scripts for SC2LE released by DeepMind and Blizzard, more details [here](https://github.com/deepmind/pysc2).
 
