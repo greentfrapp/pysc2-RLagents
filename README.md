@@ -1,7 +1,7 @@
-# Update coming by 13th May 2018
-
 # pysc2-RLagents
 Notes and scripts for SC2LE released by DeepMind and Blizzard, more details [here](https://github.com/deepmind/pysc2).
+
+#### There seems to be a bug where the agent's performance drops drastically after prolonged training eg. in MoveToBeacon from 25 to 1. I'm still trying to work on this when I can spare the time.
 
 ## Important Links
 
