@@ -63,6 +63,16 @@ Contains notes on developing RL agents for SC2LE.
 
 Contains scripts for training and running RL agents in SC2LE.
 
+### `PySC2_A3C_FullyConv.py`
+
+This script implements the A3C algorithm with the FullyConv architecture described in DeepMind's paper, for SC2LE. The code is based on Arthur Juliani's A3C implementation for the VizDoom environment (see above).
+
+To run the script, use the following command:
+
+`python PySC2_A3C_FullyConv.py --map_name MoveToBeacon`
+
+If `--map_name` is not supplied, the script runs DefeatRoaches by default.
+
 ### `PySC2_A3C_AtariNet.py`
 
 This script implements the A3C algorithm with the Atari-net architecture described in DeepMind's paper, for SC2LE. The code is based on Arthur Juliani's A3C implementation for the VizDoom environment (see above).
@@ -71,7 +81,7 @@ This is a generalized version of PySC2_A3C_old.py that works for all minigames a
 
 To run the script, use the following command:
 
-`python PySC2_A3C_AtariNet.py --map_name CollectMineralShards`
+`python PySC2_A3C_AtariNet.py --map_name MoveToBeacon`
 
 If `--map_name` is not supplied, the script runs DefeatRoaches by default.
 
